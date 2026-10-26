@@ -1,0 +1,194 @@
+/* ---------------------------------------------------------------------------
+   N4 Pilot design tokens — "peta yang tenang".
+   Colors, type and spacing follow DESIGN.md §7. Dark mode uses its own tokens,
+   never an inversion.
+--------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-700.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/plus-jakarta-sans-800.woff2') format('woff2');
+}
+
+:root {
+  /* Ink & neutrals */
+  --ink-900: #101418;
+  --ink-700: #2a3138;
+  --gray-600: #5b6570;
+  --gray-400: #8b949e;
+  --gray-200: #d7dce1;
+  --gray-100: #eceff2;
+  --paper-50: #faf7f0;
+  --white: #ffffff;
+
+  /* Brand */
+  --indigo-700: #14263f;
+  --indigo-600: #1d3557;
+  --indigo-500: #2a4a73;
+  --indigo-100: #dce6f2;
+  --indigo-50: #eef3f9;
+
+  /* Status */
+  --vermilion-600: #b83a32;
+  --vermilion-500: #d1493f;
+  --vermilion-100: #f8e3e0;
+  --matcha-600: #466b46;
+  --matcha-500: #5b7f5a;
+  --matcha-100: #e4efe3;
+  --amber-600: #8a5a12;
+  --amber-500: #b7791f;
+  --amber-100: #f7ecd8;
+  --sky-100: #dceaf2;
+
+  /* Semantic aliases */
+  --bg: var(--paper-50);
+  --surface: var(--white);
+  --surface-2: #f3efe6;
+  --text: var(--ink-900);
+  --text-secondary: var(--gray-600);
+  --text-tertiary: var(--gray-400);
+  --border: var(--gray-200);
+  --border-strong: #c3cbd3;
+  --primary: var(--indigo-600);
+  --primary-pressed: var(--indigo-700);
+  --primary-soft: var(--indigo-100);
+  --success: var(--matcha-600);
+  --success-soft: var(--matcha-100);
+  --warning: var(--amber-600);
+  --warning-soft: var(--amber-100);
+  --danger: var(--vermilion-600);
+  --danger-soft: var(--vermilion-100);
+  --info: var(--indigo-600);
+  --info-soft: var(--sky-100);
+
+  /* Type */
+  --font-ui: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-jp: 'Noto Sans JP', 'Yu Gothic', 'Hiragino Sans', 'Meiryo', sans-serif;
+  --text-display: clamp(2rem, 6vw, 2.5rem);
+  --text-h1: clamp(1.55rem, 5vw, 2rem);
+  --text-h2: 1.5rem;
+  --text-h3: 1.25rem;
+  --text-body-l: 1.125rem;
+  --text-body: 1rem;
+  --text-label: 0.875rem;
+  --text-caption: 0.75rem;
+
+  /* Spacing (4pt grid) */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --s-16: 64px;
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-card: 16px;
+  --radius-sheet: 24px;
+  --shadow-1: 0 1px 2px rgba(16, 20, 24, 0.06), 0 4px 12px rgba(16, 20, 24, 0.04);
+  --shadow-2: 0 12px 32px rgba(16, 20, 24, 0.16);
+  --shadow-sheet: 0 -8px 32px rgba(16, 20, 24, 0.18);
+
+  /* Layout */
+  --app-max: 1120px;
+  --content-max: 720px;
+  --reading-max: 680px;
+  --nav-height: 64px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur-tap: 120ms;
+  --dur-page: 180ms;
+  --dur-sheet: 240ms;
+  --dur-progress: 300ms;
+
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --ink-900: #e8edf2;
+  --ink-700: #c9d3de;
+  --gray-600: #aab6c4;
+  --gray-400: #7d8b99;
+  --gray-200: #2a3544;
+  --gray-100: #1f2937;
+  --paper-50: #0b0f14;
+  --white: #121821;
+
+  --indigo-700: #9db7d8;
+  --indigo-600: #9db7d8;
+  --indigo-500: #b8cbe4;
+  --indigo-100: #1c2b3d;
+  --indigo-50: #16202c;
+
+  --vermilion-600: #f08a80;
+  --vermilion-500: #f08a80;
+  --vermilion-100: #3a1f1d;
+  --matcha-600: #9cc09a;
+  --matcha-500: #9cc09a;
+  --matcha-100: #1b2a1b;
+  --amber-600: #e3b56a;
+  --amber-500: #e3b56a;
+  --amber-100: #33280f;
+  --sky-100: #16232f;
+
+  --bg: #0b0f14;
+  --surface: #121821;
+  --surface-2: #1a2230;
+  --text: #e8edf2;
+  --text-secondary: #aab6c4;
+  --text-tertiary: #7d8b99;
+  --border: #2a3544;
+  --border-strong: #3a485a;
+  --primary: #9db7d8;
+  --primary-pressed: #b8cbe4;
+  --primary-soft: #1c2b3d;
+  --success: #9cc09a;
+  --success-soft: #1b2a1b;
+  --warning: #e3b56a;
+  --warning-soft: #33280f;
+  --danger: #f08a80;
+  --danger-soft: #3a1f1d;
+  --info: #9db7d8;
+  --info-soft: #16232f;
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 12px 32px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
+}

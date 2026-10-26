@@ -1,0 +1,13 @@
+node_modules/
+.npm-cache/
+.cache/
+.metrics/
+fixtures/
+.dev/
+dist/
+.chrome-profile/
+.chrome-dom.html
+.edge-profile/
+*.log
+.DS_Store
+Thumbs.db

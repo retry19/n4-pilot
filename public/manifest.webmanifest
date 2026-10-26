@@ -1,0 +1,55 @@
+{
+  "name": "N4 Pilot — dari nol ke JLPT N4",
+  "short_name": "N4 Pilot",
+  "description": "Rencana harian menuju JLPT N4: estimasi jujur, section gate, review FSRS, dan latihan format ujian. Bahasa Indonesia.",
+  "lang": "id",
+  "dir": "ltr",
+  "start_url": "/#/today",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#FAF7F0",
+  "theme_color": "#1D3557",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Hari Ini",
+      "short_name": "Hari Ini",
+      "url": "/#/today",
+      "description": "Mulai sesi hari ini"
+    },
+    {
+      "name": "Review",
+      "short_name": "Review",
+      "url": "/#/review",
+      "description": "Review yang jatuh tempo"
+    },
+    {
+      "name": "Progres",
+      "short_name": "Progres",
+      "url": "/#/progress",
+      "description": "Lihat kesiapan dan gate"
+    }
+  ]
+}
